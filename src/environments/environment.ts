@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    clientId: 'heimdallr.api',
+    idpBaseUrl: 'https://heimdallr-api.azurewebsites.net/',
+    resourceBaseUrl: 'https://heimdallr-sampleresource-api.azurewebsites.net/',
 };
 
 /*

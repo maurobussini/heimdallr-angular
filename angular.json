@@ -21,12 +21,17 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles.css"
+                "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+                "./node_modules/toastr/build/toastr.min.css",
+                "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+                "./node_modules/toastr/build/toastr.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -51,7 +56,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "ngsw-config.json"
             }
           }
         },
@@ -81,7 +88,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
               "src/styles.css"
@@ -115,6 +123,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "hello-pwa"
 }
